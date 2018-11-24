@@ -11,6 +11,7 @@ class Board {
     // UI for collection of nodes
     this.listNodes = createNode('div');
     this.listNodes.classList.add('lists');
+    this.listForm = listForm();
   }
   render() {
     // Board
@@ -18,14 +19,12 @@ class Board {
     this.node.appendChild(this.titleNode);
 
     // List
-    this.listForm = listForm();
     this.lists.push(new List(this, 'Add new list1..', 0, true));
     this.lists.forEach(list => {
       this.listNodes.appendChild(list.node);
     });
     this.lists[this.lists.length - 1].node.appendChild(this.listForm);
-    this.lists[this.lists.length - 1].node
-      .addEventListener('click', () => addList(this));
+    this.lists[this.lists.length - 1].node.addEventListener('click',() => addList(this), {once: true});
     this.node.appendChild(this.listNodes);
     
   }

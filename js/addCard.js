@@ -1,4 +1,7 @@
 function addCard(list) {
+  
+  console.log(list, 'in list')
+
   list.cardForm.style.display = 'block';
   const cardText = list.cardNodes.querySelector('.card-text')
       , cardSubmit = list.cardNodes.querySelector('.card-submit');
@@ -9,9 +12,7 @@ function addCard(list) {
         , card;
     card = new Card(list, title);
     cardText.value = "";
-    console.log(list.cardForm.style.display)
     list.cardForm.style.display = 'none';
-    console.log(list.cardForm.style.display)
-    list.cardNodes.insertBefore(card.node, list.cards[list.cards.length - 1].node)
+    list.cardNodes.insertBefore(card.node, list.cards[list.cards.length - 1].node);
   }
 }

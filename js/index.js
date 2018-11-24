@@ -3,5 +3,4 @@ document.body.onload = function() {
   board.render();
   document.getElementById('main')
     .appendChild(board.node);
-  console.log(board)
 }

@@ -4,3 +4,9 @@
   padding: 5px 15px;
   text-align: center;
 }
+.card span {
+  display: none;
+}
+.card:hover span {
+  display: block;
+}
