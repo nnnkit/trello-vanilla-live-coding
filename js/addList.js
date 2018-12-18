@@ -10,7 +10,7 @@ function addList(board) {
     let value = listValue.value
         , index = board.lists.length - 1
         , list;
-    board.listForm.style.display = 'block';
+    board.listForm.style.display = 'none';
     if(value){
       list = new List(board, value, index);
       board.lists.splice(index, 0, list);

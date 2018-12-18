@@ -27,7 +27,7 @@ class List {
         this.cardNodes.appendChild(card.node);
       });
       this.node.appendChild(this.cardNodes);
-      this.cards[this.cards.length - 1].node.addEventListener('click', () => addCard(this),{once: true});
+      this.cards[this.cards.length - 1].titleNode.addEventListener('click', () => addCard(this));
     }
   }
 }

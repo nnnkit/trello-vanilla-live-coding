@@ -19,12 +19,12 @@ class Board {
     this.node.appendChild(this.titleNode);
 
     // List
-    this.lists.push(new List(this, 'Add new list1..', 0, true));
+    this.lists.push(new List(this, 'Add new list..', 0, true));
     this.lists.forEach(list => {
       this.listNodes.appendChild(list.node);
     });
     this.lists[this.lists.length - 1].node.appendChild(this.listForm);
-    this.lists[this.lists.length - 1].node.addEventListener('click',() => addList(this), {once: true});
+    this.lists[this.lists.length - 1].listTitleNode.addEventListener('click',() => addList(this));
     this.node.appendChild(this.listNodes);
     
   }
